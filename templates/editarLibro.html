@@ -1,0 +1,49 @@
+{% extends "template.html" %}
+    {% block contenido %}
+      <div class="container">
+        <br>
+        <br>
+        <h1 class="text-center">Editar</h1>
+        <br>
+        <br>
+        <br>
+        <div class="d-flex justify-content-center">
+          <form action="{{ url_for('editarLibro',libro_id = libro.id)}}" method="POST">
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="" for="nombre">Titulo</label>
+                <input type="text" class="form-control mb-2" name="nombre" placeholder="Ingrese el titulo" value="{{libro.titulo }}">
+              </div>
+              <div class="col-auto">
+                <label class="" for="autor">Autor</label>
+                <input type="text" class="form-control mb-2" name="autor" placeholder="Ingrese el autor" value="{{libro.autor }}">
+              </div>
+              <div class="col-auto">
+                <label class="" for="genero">Genero</label>
+                <input type="text" class="form-control mb-2" name="genero" placeholder="Ingrese el genero" value="{{libro.genero }}">
+              </div>
+            </div>
+            <br>
+            <div class="d-flex justify-content-center"></div>
+                <button type="submit" class="btn-success"><i class="far fa-save fa-2x px-3"></i>Guardar</button>
+                 <a href='{{ url_for("mostrarLibros") }}'>
+                  <button class="naranja"><i class="far fa-window-close fa-2x px-3"></i>Cancelar</button>
+                </a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      {% endblock %} 
+
+
+
+
+
+
+
+
+         
+        

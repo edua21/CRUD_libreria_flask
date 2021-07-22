@@ -1,0 +1,16 @@
+.naranja{
+    background-color: #f7a437;
+}
+
+.banner{
+    background-color: rgb(216, 160, 95);
+    font-size: 100px;
+}
+
+.fondo{
+    background-image: url("../images/libreria1.jpg");
+  }
+
+.menu{
+    background-color: rgb(216, 160, 95);
+}

@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+    {% block contenido %}
+      <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 class="text-center">Estás seguro que querés eliminar el libro {{libro.titulo}}? </h2>
+        <form action="#" method='post'>
+            <div class="d-flex justify-content-center">
+                <button class="bg-danger mr-1" type="submit"><i class="far fa-trash-alt fa-2x px-3"></i>Eliminar</button>
+                <a href='{{ url_for("mostrarLibros") }}'>
+                    <button class="naranja ml-1"><i class="far fa-window-close fa-2x px-3"></i>Cancelar</button>
+                </a>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>  
+    {% endblock %} 
+
+
+
+
+
+
+    
+       

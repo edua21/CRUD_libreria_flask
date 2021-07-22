@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+    {% block contenido %}
+      <div class="container">
+        <h1 class="text-center">Agregar un Libro</h1>
+        <br>
+        <br>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nombre">Titulo:</label>
+                <input class="form-control" type="text" maxlength="100" name="nombre" placeholder="Nombre del Libro">
+            </div>
+            <div class="form-group">
+                <label for="autor">Autor:</label>
+                <input class="form-control" maxlength="100" name="autor" placeholder="Autor del Libro">
+            </div>
+            <div class="form-group">
+                <label for="genero">Genero:</label>
+                <input class="form-control" maxlength="100" name="genero" placeholder="Genero del Libro">
+            </div class="form-group">    
+                <button type="submit" class="btn btn-success"><i class="far fa-save fa-2x px-3"></i>Guardar</button>
+            </div>
+        </form>
+    </div>
+    {% endblock %} 
+       

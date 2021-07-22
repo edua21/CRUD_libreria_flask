@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+    {% block contenido %}
+      <div class="container-fluid fondo">
+        <div class="container my-3">
+          <h1 class="text-center">Colecciones</h1>
+          <br>
+          <br>
+          <table id=example class="table">
+            <thead>
+              <tr>
+                <th scope="col">Libro</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Genero</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for libro in libros %} 
+              <tr>
+                <td>{{libro.titulo}}</td>
+                <td>{{libro.autor}}</td>
+                <td>{{libro.genero}}</td>
+                <td>
+                <a class="btn btn-dark" href="{{url_for('editarLibro', libro_id = libro.id )}}">
+                  <i class="far fa-edit fa-2x"></i>
+                </a>
+                </td>
+                <td>
+                <a class="btn btn-danger" href="{{url_for('eliminarLibro', libro_id = libro.id )}}" style="margin-left: 10px;">
+                  <i class="far fa-trash-alt fa-2x"></i>
+                </a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <a class="btn btn-success" href="{{url_for('nuevoLibro')}}">
+            <i class="far fa-plus-square fa-2x px-3"></i>
+          </a>          
+          <br>
+          <br>
+        </div>
+      </div>
+      {% endblock %}  
